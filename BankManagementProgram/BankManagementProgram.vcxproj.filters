@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\BST">
+      <UniqueIdentifier>{4e43b3df-eec2-474f-9f9b-e41a1cf2f7f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hashtable">
+      <UniqueIdentifier>{77b31474-26b5-4d82-8d6b-24bfc12a68ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BSTCPP">
+      <UniqueIdentifier>{1c7fadf3-15f9-433f-943f-21daaca0c802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hashtable">
+      <UniqueIdentifier>{f17fcaea-37a6-4512-9970-9dcc3903330c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Roles">
+      <UniqueIdentifier>{b5e18e7a-1c4a-45d0-a893-e8f0d63ebe8d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HashNode.cpp">
+      <Filter>Source Files\Hashtable</Filter>
+    </ClCompile>
+    <ClCompile Include="HashTable.cpp">
+      <Filter>Source Files\Hashtable</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyNode.cpp">
+      <Filter>Source Files\Hashtable</Filter>
+    </ClCompile>
+    <ClCompile Include="BSTTree.cpp">
+      <Filter>Source Files\BSTCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BSTTree.h">
+      <Filter>Header Files\BST</Filter>
+    </ClInclude>
+    <ClInclude Include="HashNode.h">
+      <Filter>Header Files\Hashtable</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>Header Files\Hashtable</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyNode.h">
+      <Filter>Header Files\Hashtable</Filter>
+    </ClInclude>
+    <ClInclude Include="Admin.h">
+      <Filter>Header Files\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="Customer.h">
+      <Filter>Header Files\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="Staff.h">
+      <Filter>Header Files\Roles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Admin.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="hashtable.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
