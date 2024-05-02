@@ -3,11 +3,14 @@
 #include "KeyNode.h"
 
 HashTable::HashTable() {
-	hashTable = new KeyNode * [12];
+	size = 12;
+	hashTable = new KeyNode*[12];
 };
 
 HashTable::~HashTable() {
-
+	for (int i = 0; i < size; i++) {
+		delete hashTable[i];
+	}
 };
 
 void HashTable::startHash() {

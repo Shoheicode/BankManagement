@@ -22,6 +22,7 @@ public:
 
 private:
 	KeyNode** hashTable;
+	int size;
 };
 
 #endif // !HASHTABLE_H
