@@ -61,7 +61,7 @@ private:
 	void findMax(BSTNode*);
 	void loadServer();
 	void updateServer(BSTNode*);
-	BSTNode* search(BSTNode*);
+	BSTNode* search(BSTNode*, int acNum);
 	void printInfo(BSTNode*);
 
 };

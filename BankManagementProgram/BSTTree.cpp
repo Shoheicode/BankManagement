@@ -102,5 +102,68 @@ void BSTTree::printInfo(BSTNode*) {
 }
 
 void BSTTree::deleteAccountAll(BSTNode* node, int accountNum) {
+	if (node == nullptr) {
+		return; // cout << "No Accounts" << endl;
+	}
+	else if (accountNum < node->accountNum) {
+		deleteAccountAll(node->left, accountNum);
+	}
+	else if (accountNum > node->accountNum) {
+		deleteAccountAll(node->right, accountNum);
+	}
+	else {
+		BSTNode* temp2 = node;
+		if (node->left && node->right) {
+			//BSTNode* temp2 = temp;
+			temp2 = node->right;
+			temp2->left = node->left;
+			node = nullptr;
+			delete node;
+		}
+		else {
+			if (node->left == nullptr) {
+				temp2 = node->right;
+			}
+			else if (node->right == nullptr) {
+				temp2 = node->left;
+			}
+			delete node;
+		}
+	}
+}
+
+void BSTTree::withdraw(int acNum, int amt) {
+	loadServer();
+
+	BSTNode* temp = search(root, acNum);
+	temp->balance = temp->balance - amt;
+	vector<int> data;
+
+	ifstream read;
+	read.open("transaction.txt", ios::app);
+	int line = 0;
+	while (!read.eof()) {
+		read >> line;
+		if (line == acNum) {
+			data.push_back(line);
+			line = amt * -1;
+			data.push_back(line);
+			continue;
+		}
+		data.push_back(line);
+	}
+	read.close();
+
+	ofstream write;
+	write.open("temp.txt", ios::app);
+	for (int i = 0; i < data.size(); i++)
+	{
+		write << data[i] << endl;
+	}
+	write.close();
+	remove("transaction.txt");
+	rename("temp.txt", "transaction.txt");
+
+	updateServer(root);
 
 }
