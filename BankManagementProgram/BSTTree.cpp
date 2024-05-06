@@ -89,7 +89,16 @@ void BSTTree::deleteAccount(int accountNum) {
 }
 
 void BSTTree::printInfo(BSTNode*) {
-	
+	if (root) {
+		printInfo(root->left);
+		cout << root->name << endl;
+		cout << root->address << endl;
+		cout << root->accountNum << endl;
+		cout << root->password << endl;
+		cout << root->balance << endl;
+		printInfo(root->right);
+
+	}
 }
 
 void BSTTree::deleteAccountAll(BSTNode* node, int accountNum) {
