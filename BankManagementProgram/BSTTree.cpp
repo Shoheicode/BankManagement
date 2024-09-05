@@ -167,3 +167,7 @@ void BSTTree::withdraw(int acNum, int amt) {
 	//updateServer(root);
 
 }
+
+void BSTTree::loadServer(){
+	
+}
