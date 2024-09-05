@@ -133,9 +133,9 @@ void BSTTree::deleteAccountAll(BSTNode* node, int accountNum) {
 }
 
 void BSTTree::withdraw(int acNum, int amt) {
-	loadServer();
+	//loadServer();
 
-	BSTNode* temp = search(root, acNum);
+	BSTNode* temp = new BSTNode(); //= search(root, acNum);
 	temp->balance = temp->balance - amt;
 	vector<int> data;
 
@@ -164,6 +164,6 @@ void BSTTree::withdraw(int acNum, int amt) {
 	remove("transaction.txt");
 	rename("temp.txt", "transaction.txt");
 
-	updateServer(root);
+	//updateServer(root);
 
 }

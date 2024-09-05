@@ -39,6 +39,9 @@ public:
 };
 
 int main() {
+	/*
+		FIX THIS
+	*/
 	HashTable table;
 	table.loadHashTable();
 
