@@ -10,6 +10,7 @@ class KeyNode {
 public:
 	KeyNode();
 	KeyNode(int);
+	~KeyNode();
 
 	int data;
 	KeyNode* next;

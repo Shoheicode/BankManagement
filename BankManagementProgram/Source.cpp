@@ -1,5 +1,6 @@
 #include "BSTTree.h"
 #include "Admin.h"
+#include "customer.h"
 #include "fstream"
 #include <windows.h>
 #include "HashTable.h";
@@ -49,7 +50,7 @@ int main() {
 			system("CLS");
 		}
 		else if (check == 3) {
-			
+			customer();
 			system("CLS");
 		}
 	}
