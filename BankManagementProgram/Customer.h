@@ -15,7 +15,16 @@ void customer() {
 		cout << "press 3 to exit" << endl;
 		cin >> condition;
 		if (condition == 1) {
-
+			int accountno;
+			cout << "please enter account number" << endl;
+			cin >> accountno;
+			BSTTree::BSTNode* temp = t.search(t.getRoot(), accountno);
+			cout << "Account Details Are :\t\t\t\t\t\t " << endl << endl;
+			cout << "NAME :" << temp->name << endl;
+			cout << "ADRESS :" << temp->address << endl;
+			cout << "ACCOUNT NUMBER :" << temp->accountNum << endl;
+			cout << "PASSWORD :" << temp->password << endl;
+			cout << "BALANCE :" << temp->balance << endl;
 		}
 		else if (condition == 2) {
 

@@ -44,6 +44,7 @@ public:
 	~BSTTree();
 	vector<int> v;
 	HashTable hi;
+	BSTNode* getRoot() { return root; }
 	void addAccount(string, string, int, int, int);
 	void deleteAccount(int);
 	void withdraw(int, int);
@@ -51,6 +52,7 @@ public:
 	void editAccountAdmin();
 	void transfer(int, int, int);
 	void transactionHistory();
+	BSTNode* search(BSTNode*, int acNum);
 	
 private:
 
@@ -63,7 +65,6 @@ private:
 	void findMax(BSTNode*);
 	void loadServer();
 	void updateServer(BSTNode*);
-	BSTNode* search(BSTNode*, int acNum);
 	void printInfo(BSTNode*);
 
 };
