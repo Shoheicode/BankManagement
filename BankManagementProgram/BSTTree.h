@@ -2,6 +2,7 @@
 #ifndef BSTTREE_H
 #define BSTTREE_H
 #include "HashTable.h"
+using namespace std;
 
 class BSTTree {
 public:

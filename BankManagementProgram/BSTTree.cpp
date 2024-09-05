@@ -1,4 +1,6 @@
 #include "BSTTree.h"
+#include <iostream>
+#include <string>
 
 BSTTree::BSTTree() {
 	root = new BSTNode();
@@ -133,7 +135,7 @@ void BSTTree::deleteAccountAll(BSTNode* node, int accountNum) {
 }
 
 void BSTTree::withdraw(int acNum, int amt) {
-	//loadServer();
+	loadServer();
 
 	BSTNode* temp = new BSTNode(); //= search(root, acNum);
 	temp->balance = temp->balance - amt;
@@ -169,5 +171,28 @@ void BSTTree::withdraw(int acNum, int amt) {
 }
 
 void BSTTree::loadServer(){
-	
+	ifstream read;
+	read.open("server.txt", ios::app);
+
+	string name = "";
+	string adress = "";
+	int accountno = 0;
+	int password = 0;
+	int balance = 0;
+	//cin.ignore();
+	while (!read.eof())
+	{
+		
+		getline(read, name);
+		getline(read, adress);
+		read >> accountno;
+		read >> password;
+		read >> balance;
+		read.ignore();
+		read.ignore();
+
+		cout << name << endl;
+	}
+
+	read.close();
 }
