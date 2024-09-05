@@ -1,5 +1,2 @@
 ﻿  BSTTree.cpp
-  Source.cpp
-C:\Users\Jason Irie\BankManagement\BankManagementProgram\BSTTree.cpp(177,11): error C2086: 'std::ifstream read': redefinition
-C:\Users\Jason Irie\BankManagement\BankManagementProgram\Source.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Generating Code...
+  BankManagementProgram.vcxproj -> C:\Users\Jason Irie\BankManagement\x64\Debug\BankManagementProgram.exe
