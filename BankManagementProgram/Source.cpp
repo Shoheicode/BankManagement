@@ -51,7 +51,7 @@ int main() {
 		}
 		else if (check == 3) {
 			customer();
-			system("CLS");
+			//system("CLS");
 		}
 	}
 	system("pause");

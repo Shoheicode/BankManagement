@@ -24,7 +24,7 @@ void BSTTree::deleteAllNodes(BSTNode* current) {
 }
 
 void BSTTree::addAccount(string name, string address, int accountNum, int password, int balance) {
-	hi.addToHash(accountNum, password);
+	hash.addToHash(accountNum, password);
 	ofstream writer;
 
 	writer.open("server.txt", ios::app);

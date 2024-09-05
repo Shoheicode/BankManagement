@@ -43,7 +43,7 @@ public:
 	BSTTree();
 	~BSTTree();
 	vector<int> v;
-	HashTable hi;
+	HashTable hash;
 	BSTNode* getRoot() { return root; }
 	void addAccount(string, string, int, int, int);
 	void deleteAccount(int);

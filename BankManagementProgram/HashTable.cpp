@@ -9,9 +9,9 @@ HashTable::HashTable() {
 };
 
 HashTable::~HashTable() {
-	for (int i = 0; i < size; i++) {
-		delete hashTable;
-	}
+	delete hashTable;
+	cout << "I AM DESTRUCTING" << endl;
+	//delete hashTable;
 };
 
 void HashTable::startHash() {

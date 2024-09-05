@@ -1,6 +1,2 @@
-﻿  BSTTree.cpp
-  HashTable.cpp
-  Source.cpp
-C:\Users\Jason Irie\BankManagement\BankManagementProgram\Source.cpp(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Generating Code...
+﻿  HashTable.cpp
   BankManagementProgram.vcxproj -> C:\Users\Jason Irie\BankManagement\x64\Debug\BankManagementProgram.exe

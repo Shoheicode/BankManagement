@@ -4,7 +4,9 @@
 
 void customer() {
 	BSTTree t;
+	cout << "HI" << endl;
 	HashTable h;
+	cout << "BYE" << endl;
 
 	int condition = 0;
 	while (condition != 3) {
