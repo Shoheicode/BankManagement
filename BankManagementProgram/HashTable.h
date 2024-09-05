@@ -21,7 +21,7 @@ public:
 	void deletePassword(int);
 
 private:
-	KeyNode* hashTable;
+	KeyNode** hashTable;
 	int size;
 };
 

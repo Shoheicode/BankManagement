@@ -4,11 +4,17 @@
 
 HashTable::HashTable() {
 	size = 12;
-	hashTable = new KeyNode[12];
-	cout << hashTable[0].data << endl;
+	hashTable = new KeyNode*[12];
+	for (int i = 0; i < size; i++) {
+		hashTable[i] = new KeyNode();
+	}
+	//cout << hashTable[0].data << endl;
 };
 
 HashTable::~HashTable() {
+	for (int i = 0; i < size; i++) {
+		delete hashTable[i];
+	}
 	delete hashTable;
 	cout << "I AM DESTRUCTING" << endl;
 	//delete hashTable;
@@ -17,7 +23,7 @@ HashTable::~HashTable() {
 void HashTable::startHash() {
 	for (int i = 0; i < 12; i++) {
 		KeyNode* temp = new KeyNode(i);
-		hashTable[i] = *temp;
+		hashTable[i] = temp;
 
 		loadHashTable();
 	}
@@ -39,7 +45,7 @@ void HashTable::loadHashTable() {
 		if (acc != -858993460 && pass - 858993460) {
 			r = acc % 12;
 
-			KeyNode* c = &hashTable[r];
+			KeyNode* c = hashTable[r];
 
 			HashNode* node = new HashNode(acc, pass);
 			if (c->nodes == nullptr) {
@@ -89,7 +95,7 @@ bool HashTable::match(int a, int p) {
 
 	int r = a % 12;
 
-	KeyNode* c = &hashTable[r];
+	KeyNode* c = hashTable[r];
 
 	HashNode* c1 = c->nodes;
 
