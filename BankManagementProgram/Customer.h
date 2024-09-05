@@ -19,12 +19,17 @@ void customer() {
 			cout << "please enter account number" << endl;
 			cin >> accountno;
 			BSTTree::BSTNode* temp = t.search(t.getRoot(), accountno);
-			cout << "Account Details Are :\t\t\t\t\t\t " << endl << endl;
-			cout << "NAME :" << temp->name << endl;
-			cout << "ADRESS :" << temp->address << endl;
-			cout << "ACCOUNT NUMBER :" << temp->accountNum << endl;
-			cout << "PASSWORD :" << temp->password << endl;
-			cout << "BALANCE :" << temp->balance << endl;
+			if (temp == nullptr){
+				
+			}
+			else {
+				cout << "Account Details Are :\t\t\t\t\t\t " << endl << endl;
+				cout << "NAME :" << temp->name << endl;
+				cout << "ADRESS :" << temp->address << endl;
+				cout << "ACCOUNT NUMBER :" << temp->accountNum << endl;
+				cout << "PASSWORD :" << temp->password << endl;
+				cout << "BALANCE :" << temp->balance << endl;
+			}
 		}
 		else if (condition == 2) {
 
@@ -35,6 +40,7 @@ void customer() {
 		else {
 			cout << "Please insert a valid response" << endl;
 			condition = 0;
+			system("CLS");
 		}
 	}
 }

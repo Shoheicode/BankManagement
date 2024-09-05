@@ -196,3 +196,7 @@ void BSTTree::loadServer(){
 
 	read.close();
 }
+
+BSTTree::BSTNode* BSTTree::search(BSTNode* node, int accNum) {
+	return nullptr;
+}
