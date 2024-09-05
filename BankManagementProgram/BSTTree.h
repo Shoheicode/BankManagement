@@ -6,19 +6,6 @@ using namespace std;
 
 class BSTTree {
 public:
-	BSTTree();
-	~BSTTree();
-	vector<int> v;
-	HashTable hi;
-	void addAccount(string, string, int, int, int);
-	void deleteAccount(int);
-	void withdraw(int, int);
-	void deposit(int, int);
-	void editAccountAdmin();
-	void transfer(int, int, int);
-	void transactionHistory();
-	
-private:
 	struct BSTNode {
 	public:
 		//Nodes to the left and right in binary tree
@@ -52,6 +39,20 @@ private:
 			right = nullptr;
 		};
 	};
+
+	BSTTree();
+	~BSTTree();
+	vector<int> v;
+	HashTable hi;
+	void addAccount(string, string, int, int, int);
+	void deleteAccount(int);
+	void withdraw(int, int);
+	void deposit(int, int);
+	void editAccountAdmin();
+	void transfer(int, int, int);
+	void transactionHistory();
+	
+private:
 
 	BSTNode* root;
 
