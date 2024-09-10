@@ -41,5 +41,14 @@ void staff()
 			cin >> amount;
 			t.withdraw(accountno, amount);
 		}
+		if (condition == 4)
+		{
+			int accountno = 0, amount = 0;
+			cout << "please enter account number" << endl;
+			cin >> accountno;
+			cout << "please enter amount" << endl;
+			cin >> amount;
+			t.deposit(accountno, amount);
+		}
 	}
 }
