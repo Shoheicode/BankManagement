@@ -134,6 +134,35 @@ void BSTTree::deleteAccountAll(BSTNode* node, int accountNum) {
 	}
 }
 
+void BSTTree::deposit(int acNum, int amt) {
+	loadServer();
+	BSTNode* temp = search(root, acNum);
+	temp->balance = temp->balance + amt;
+
+	vector <int> data;
+	ifstream read;
+	read.open("transaction.txt", ios::app);
+	int line = 0;
+	while (!read.eof())
+	{
+		read >> line;
+		if (line == acNum)
+		{
+			data.push_back(line);
+			line = amt;
+			data.push_back(line);
+			continue;
+		}
+		data.push_back(line);
+	}
+	read.close();
+}
+
+void BSTTree::transfer(int sender_accountno, int reciever_accountno, int sender_amount)
+{
+
+}
+
 void BSTTree::withdraw(int acNum, int amt) {
 	loadServer();
 

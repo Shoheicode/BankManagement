@@ -1,6 +1,7 @@
 #include "BSTTree.h"
 #include "Admin.h"
-#include "customer.h"
+#include "Customer.h"
+#include "Staff.h"
 #include "fstream"
 #include <windows.h>
 #include "HashTable.h";
@@ -47,6 +48,7 @@ int main() {
 			reader.close();
 		}
 		else if (check == 2) {
+			staff();
 			system("CLS");
 		}
 		else if (check == 3) {
