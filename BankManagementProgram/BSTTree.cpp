@@ -220,6 +220,14 @@ void BSTTree::updateServer(BSTNode* root) {
 
 }
 
+void BSTTree::findMax(BSTNode* root) {
+	if (root) {
+		findMax(root->left);
+		v.push_back(root->accountNum);
+		findMax(root->right);
+	}
+}
+
 BSTTree::BSTNode* BSTTree::search(BSTNode* node, int accNum) {
 	return nullptr;
 }

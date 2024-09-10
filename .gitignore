@@ -43,3 +43,6 @@
 .vs/BankManagementProgram/v17/.suo
 .vs/BankManagementProgram/v17/Browse.VC.db
 .vs/BankManagementProgram/v17/DocumentLayout.json
+*.vsidx
+*.db
+*.json
