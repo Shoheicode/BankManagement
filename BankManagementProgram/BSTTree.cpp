@@ -156,6 +156,17 @@ void BSTTree::deposit(int acNum, int amt) {
 		data.push_back(line);
 	}
 	read.close();
+	ofstream write;
+	write.open("temp.txt", ios::app);
+	for (int i = 0; i < data.size(); i++)
+	{
+		write << data[i] << endl;
+	}
+	write.close();
+	remove("transaction.txt");
+	rename("temp.txt", "transaction.txt");
+
+	updateServer(root);
 }
 
 void BSTTree::transfer(int sender_accountno, int reciever_accountno, int sender_amount)
