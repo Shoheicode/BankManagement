@@ -21,7 +21,7 @@ void staff()
 		{
 			// transaction file print karani ha account search kr k
 		}
-		if (condition == 2)
+		if (condition == 2) // Transfer
 		{
 			int senderaccountno = 0, amount = 0, recieveraccountno = 0;
 			cout << "please enter  sender account number" << endl;
@@ -31,6 +31,15 @@ void staff()
 			cout << "please enter amount" << endl;
 			cin >> amount;
 			t.transfer(senderaccountno, amount, recieveraccountno);
+		}
+		if (condition == 3)  // withdraw
+		{
+			int accountno = 0, amount = 0;
+			cout << "please enter account number" << endl;
+			cin >> accountno;
+			cout << "please enter amount" << endl;
+			cin >> amount;
+			t.withdraw(accountno, amount);
 		}
 	}
 }
