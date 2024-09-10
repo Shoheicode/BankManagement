@@ -166,7 +166,7 @@ void BSTTree::withdraw(int acNum, int amt) {
 	remove("transaction.txt");
 	rename("temp.txt", "transaction.txt");
 
-	//updateServer(root);
+	updateServer(root);
 
 }
 
@@ -195,6 +195,29 @@ void BSTTree::loadServer(){
 	}
 
 	read.close();
+}
+
+void BSTTree::updateServer(BSTNode* root) {
+	static int i = 0;
+	if (i == 0)
+	{
+		i++;
+		remove("server.txt");
+	}
+	ofstream write;
+	write.open("server.txt");
+	if (root)
+	{
+		updateServer(root->left);
+		write << root->name << endl;
+		write << root->address << endl;
+		write << root->accountNum << endl;
+		write << root->password << endl;
+		write << root->balance << endl;
+		updateServer(root->right);
+	}
+	write.close();
+
 }
 
 BSTTree::BSTNode* BSTTree::search(BSTNode* node, int accNum) {
