@@ -1,9 +1,9 @@
 #pragma once
 #include "BSTTree.h"
-#include "Hashtable.h"
+#include "HashTable.h"
 void staff()
 {
-	BST_Tree t;
-	Hashtable h;
+	BSTTree t;
+	HashTable h;
 	int condition = 0;
 }
