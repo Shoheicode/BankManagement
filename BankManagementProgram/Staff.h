@@ -50,5 +50,9 @@ void staff()
 			cin >> amount;
 			t.deposit(accountno, amount);
 		}
+		if (condition == 5)
+		{
+			condition = 5;
+		}
 	}
 }
