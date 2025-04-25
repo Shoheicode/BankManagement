@@ -7,37 +7,37 @@ using namespace std;
 class BSTTree {
 public:
 	struct BSTNode {
-	public:
-		//Nodes to the left and right in binary tree
-		BSTNode* left;
-		BSTNode* right;
+		public:
+			//Nodes to the left and right in binary tree
+			BSTNode* left;
+			BSTNode* right;
 
-		//Data members
-		string name;
-		string address;
-		int accountNum;
-		int password;
-		int balance;
+			//Data members
+			string name;
+			string address;
+			int accountNum;
+			int password;
+			int balance;
 
-		BSTNode() {
-			name = "";
-			address = "";
-			accountNum = 0;
-			password = 0;
-			balance = 0;
-			left = nullptr;
-			right = nullptr;
-		};
+			BSTNode() {
+				name = "";
+				address = "";
+				accountNum = 0;
+				password = 0;
+				balance = 0;
+				left = nullptr;
+				right = nullptr;
+			};
 
-		BSTNode(string n, string a, int acc, int pass, int bal) {
-			name = n;
-			address = a;
-			accountNum = acc;
-			password = pass;
-			balance = bal;
-			left = nullptr;
-			right = nullptr;
-		};
+			BSTNode(string n, string a, int acc, int pass, int bal) {
+				name = n;
+				address = a;
+				accountNum = acc;
+				password = pass;
+				balance = bal;
+				left = nullptr;
+				right = nullptr;
+			};
 	};
 
 	BSTTree();
